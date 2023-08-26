@@ -19,20 +19,25 @@
 @font-face {
     font-family: 'Heading';
     /*Font not in use*/
-    src: url('./DCC-Ash.otf'), format('otf');
+    src: url('/src/assets/fonts/DCC-Ash.otf'), format('otf');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Sedgewick Ave';
-    src: url('./SedgwickAveDisplay-Regular.ttf'), format('ttf');
+    src: url('/src/assets/fonts/SedgwickAveDisplay-Regular.ttf'), format('ttf');
     font-weight: 600;
     font-style: normal;
 }
 
 #content {
     font-family: 'Sedgewick Ave';
+}
+
+#heading {
+    font-size: 2.4rem;
+    text-align: center;
 }
 
 #content {
@@ -47,5 +52,22 @@
 
 
 .red-txt {
-    color:var(--red) ;
+    color: var(--red);
+}
+
+
+#nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.navBtn {
+    padding: 0.8rem;
+    border-radius: 0;
+    background: var(--text-color);
+    border: 0;
+}
+
+.nav.icon {
+    max-width: 32px;
 }
