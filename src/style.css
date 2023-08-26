@@ -1,0 +1,51 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Variables */
+:root {
+    --red: #E60000;
+    --blue: #001F3F;
+    --text-color: #fafafa;
+    --black: #2b2b2b;
+}
+
+
+/* Custom Font */
+@font-face {
+    font-family: 'Heading';
+    /*Font not in use*/
+    src: url('./DCC-Ash.otf'), format('otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sedgewick Ave';
+    src: url('./SedgwickAveDisplay-Regular.ttf'), format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+#content {
+    font-family: 'Sedgewick Ave';
+}
+
+#content {
+    background-color: beige;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vh 0;
+}
+
+
+.red-txt {
+    color:var(--red) ;
+}
