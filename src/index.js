@@ -1,12 +1,7 @@
 //Assets
 import '/src/style.css';
-import '/src/assets/fonts/DCC-Ash.otf'
-import '/src/assets/fonts/SedgwickAveDisplay-Regular.ttf'
-import '/src/assets/icons/home.svg'
-import '/src/assets/icons/menu.svg'
-import '/src/assets/icons/contact.svg'
-import '/src/assets/supes-kitchen.png'
-
+import '/src/assets/fonts/DCC-Ash.otf';
+import '/src/assets/fonts/SedgwickAveDisplay-Regular.ttf';
 
 //Modules 
 import setupPage from './init.js';

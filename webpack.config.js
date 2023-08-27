@@ -9,7 +9,8 @@ module.exports = {
     watch: true,
     plugins: [
         new HtmlWebpackPlugin({
-            title: '',
+            title: 'Supes Kitchen',
+            favicon :'/src/assets/icons/menu.svg'
         }),
     ],
     output: {

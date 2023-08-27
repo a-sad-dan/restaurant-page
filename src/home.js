@@ -1,3 +1,5 @@
+import SupesKitchenPhoto from '/src/assets/supes-kitchen.png';
+
 export default function renderHome() {
     const main = document.querySelector('#main');
     const heading = document.querySelector('#heading')
@@ -15,7 +17,7 @@ export default function renderHome() {
     From the dark and mysterious corners to the vibrant energy of our open kitchen, every detail is crafted to immerse you in a world where culinary creativity knows no bounds. Get ready to embark on a gastronomic journey that will challenge your taste buds and redefine your dining expectations.`
 
 
-    img.src = '/src/assets/supes-kitchen.png'
+    img.src = SupesKitchenPhoto;
 
     main.appendChild(info);
     main.appendChild(img);

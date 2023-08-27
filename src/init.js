@@ -1,3 +1,8 @@
+import homeIcon from '/src/assets/icons/home.svg';
+import menuIcon from '/src/assets/icons/menu.svg';
+import contactIcon from '/src/assets/icons/contact.svg';
+
+
 export default function setupPage() {
     const mainDiv = document.createElement('div');
     mainDiv.id = 'content';
@@ -21,21 +26,21 @@ export default function setupPage() {
     mainDiv.appendChild(nav);
 
     // Nav Bar
-    const createNavLink = (name) => {
+    const createNavLink = (name,icon) => {
         const btn = document.createElement('button');
         btn.id = name;
         btn.classList.add('navBtn')
         const btnImg = document.createElement('img');
-        btnImg.src = `/src/assets/icons/${name}.svg`
+        btnImg.src = icon;
         btnImg.classList.add('nav', 'icon');
         btn.appendChild(btnImg);
 
         return btn;
     }
 
-    nav.appendChild(createNavLink('home'));
-    nav.appendChild(createNavLink('menu'));
-    nav.appendChild(createNavLink('contact'));
+    nav.appendChild(createNavLink('home',homeIcon));
+    nav.appendChild(createNavLink('menu',menuIcon));
+    nav.appendChild(createNavLink('contact',contactIcon));
 }
 
 export function clearMain()
