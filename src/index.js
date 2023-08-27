@@ -5,48 +5,41 @@ import '/src/assets/fonts/SedgwickAveDisplay-Regular.ttf'
 import '/src/assets/icons/home.svg'
 import '/src/assets/icons/menu.svg'
 import '/src/assets/icons/contact.svg'
+import '/src/assets/supes-kitchen.png'
 
 
 //Modules 
-import '/src/main.js'
+import setupPage from './init.js';
+import { clearMain } from './init.js';
+
+import renderHome from './home.js';
+import renderMenu from './menu.js';
+import renderContact from './contact.js';
 
 
-//Initial Page Load Function
-//Appending the content div
-const mainDiv = document.createElement('div');
-mainDiv.id = 'content';
-// mainDiv.textContent = "Welcome to the supes' Kitchen"
-document.body.appendChild(mainDiv);
+//Initialise Page Load
+setupPage();
+renderHome();
 
-// Components of #Content
-const heading = document.createElement('h1');
-heading.innerHTML = "Welcome to &quot;The <span class ='red-txt'>Supes</span>' Kitchen&quot;!"
-heading.id = 'heading'
 
-const main = document.createElement('div');
-main.id = 'main';
+// Select Button
+const homeBtn = document.querySelector('button#home');
+const menuBtn = document.querySelector('button#menu');
+const contactBtn = document.querySelector('button#contact');
 
-const nav = document.createElement('div');
-nav.id = 'nav'
-// nav.textContent = 'nav-bar'
+// Event listeners
+homeBtn.addEventListener('click', () => {
+    clearMain();
+    renderHome();
+});
 
-mainDiv.appendChild(heading);
-mainDiv.appendChild(main);
-mainDiv.appendChild(nav);
+menuBtn.addEventListener('click', () => {
+    clearMain();
+    renderMenu();
+})
 
-// Nav Bar
-const createNavLink = (name) => {
-    const btn = document.createElement('button');
-    btn.id = name;
-    btn.classList.add('navBtn')
-    const btnImg = document.createElement('img');
-    btnImg.src = `/src/assets/icons/${name}.svg`
-    btnImg.classList.add('nav','icon');
-    btn.appendChild(btnImg);
+contactBtn.addEventListener('click', () => {
+    clearMain();
+    renderContact();
+});
 
-    return btn;
-}
-
-nav.appendChild(createNavLink('home'));
-nav.appendChild(createNavLink('menu'));
-nav.appendChild(createNavLink('contact'));
