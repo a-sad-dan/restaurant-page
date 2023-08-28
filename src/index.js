@@ -38,3 +38,8 @@ contactBtn.addEventListener('click', () => {
     renderContact();
 });
 
+
+
+// Notes for self
+// Need to optimise images from tinyPng 
+// Need to add animations
