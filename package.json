@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/a-sad-dan/restaurant-page.git"
-  },
+  },  
   "author": "a-sad-dan",
   "license": "MIT",
   "bugs": {
