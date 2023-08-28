@@ -10,7 +10,6 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Supes Kitchen',
-            favicon :'/src/assets/icons/menu.svg'
         }),
     ],
     output: {

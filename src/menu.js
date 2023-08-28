@@ -47,12 +47,11 @@ let menu = [{
 
 export default function renderMenu() {
     const main = document.querySelector('#main');
-
-
+    const heading = document.querySelector('#heading');
+    heading.textContent = 'Menu';
     menu.forEach(dish => {
         addCard(dish);
     });
-
 
     main.classList.add('menu');
 
